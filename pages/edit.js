@@ -13,6 +13,7 @@ const Edit = () => {
   const [currentTabs, setCurrentTabs] = useState("HEADER");
   const { theme } = useTheme();
 
+  // Save
   const saveData = () => {
     if (process.env.NODE_ENV === "development") {
       fetch("/api/portfolio", {
@@ -27,7 +28,7 @@ const Edit = () => {
     }
   };
 
-  // Project Handler
+  // Project handlers
   const editProjects = (projectIndex, editProject) => {
     let copyProjects = data.projects;
     copyProjects[projectIndex] = { ...editProject };
@@ -58,8 +59,7 @@ const Edit = () => {
     setData({ ...data, projects: copyProjects });
   };
 
-  // Services Handler
-
+  // Services handlers
   const editServices = (serviceIndex, editService) => {
     let copyServices = data.services;
     copyServices[serviceIndex] = { ...editService };
@@ -87,8 +87,7 @@ const Edit = () => {
     setData({ ...data, services: copyServices });
   };
 
-  // Socials Handler
-
+// Socials handlers
   const editSocials = (socialIndex, editSocial) => {
     let copySocials = data.socials;
     copySocials[socialIndex] = { ...editSocial };
@@ -115,8 +114,7 @@ const Edit = () => {
     setData({ ...data, socials: copySocials });
   };
 
-  // Resume
-
+  // Resume handlers
   const handleAddExperiences = () => {
     setData({
       ...data,
@@ -127,8 +125,8 @@ const Edit = () => {
           {
             id: uuidv4(),
             dates: "Enter Dates",
-            type: "Full Time",
-            position: "Frontend Engineer at X",
+            type: "Enter ex. Full Time",
+            position: "Enter a postion ex. Frontend Engineer at X",
             bullets: ["Worked on the frontend of a React application"],
           },
         ],
@@ -145,16 +143,27 @@ const Edit = () => {
     });
   };
 
+  const handleDeleteExperiences = (id) => {
+    const copyExperiences = data.resume.experiences;
+    copyExperiences = copyExperiences.filter((experience) => experience.id !== id);
+    setData({
+      ...data,
+      resume: { ...data.resume, experiences: copyExperiences },
+    });
+  };
+
   return (
     <div className="container mx-auto">
       <Header></Header>
     
       <div className="mt-10">
+        {/* Edit header */}
         <div
           className={`z-10 sticky top-12 ${
             theme === "dark" ? "bg-transparent" : "bg-white"
           }`}
         >
+          {/* Dashboard and save */}
           <div className="flex items-center justify-between">
             <h1 className="text-4xl">Dashboard</h1>
             <div className="flex items-center">
@@ -164,6 +173,7 @@ const Edit = () => {
             </div>
           </div>
 
+          {/* Tabs */}
           <div className="flex items-center">
             <Button
               onClick={() => setCurrentTabs("HEADER")}
@@ -203,6 +213,7 @@ const Edit = () => {
             </Button>
           </div>
         </div>
+
         {/* HEADER */}
         {currentTabs === "HEADER" && (
           <div className="mt-10">
@@ -469,6 +480,7 @@ const Edit = () => {
             </div>
           </>
         )}
+        {/* About */}
         {currentTabs === "ABOUT" && (
           <div className="mt-10">
             <h1 className="text-2xl">About</h1>
@@ -479,6 +491,7 @@ const Edit = () => {
             ></textarea>
           </div>
         )}
+        {/* Social */}
         {currentTabs === "SOCIAL" && (
           <div className="mt-10">
             {data.socials.map((social, index) => (
@@ -532,6 +545,7 @@ const Edit = () => {
             </div>
           </div>
         )}
+        {/* Resume */}
         {currentTabs === "RESUME" && (
           <div className="mt-10">
             <h1>Main</h1>
@@ -571,7 +585,7 @@ const Edit = () => {
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{experiences.position}</h1>
                     <Button
-                      // onClick={() => deleteProject(project.id)}
+                      onClick={() => handleDeleteExperiences(experiences.id)}
                       type="primary"
                     >
                       Delete

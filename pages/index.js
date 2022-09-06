@@ -16,7 +16,7 @@ import data from "../data/portfolio.json";
 export default function Home() {
   // Ref
   const workRef = useRef();
-  const aboutRef = useRef()``;
+  const aboutRef = useRef();
   const textOne = useRef();
   const textTwo = useRef();
   const textThree = useRef();
