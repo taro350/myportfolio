@@ -16,7 +16,7 @@ import data from "../data/portfolio.json";
 export default function Home() {
   // Ref
   const workRef = useRef();
-  const aboutRef = useRef();
+  const aboutRef = useRef()``;
   const textOne = useRef();
   const textTwo = useRef();
   const textThree = useRef();
@@ -70,7 +70,7 @@ export default function Home() {
           handleAboutScroll={handleAboutScroll}
         />
         <div className="laptop:mt-20 mt-10">
-          <div className="mt-15">
+          <div className="mt-5">
             <h1
               ref={textOne}
               className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
