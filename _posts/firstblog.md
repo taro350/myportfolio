@@ -1,6 +1,6 @@
 ---
 date: '2022-07-15T11:50:54.000Z'
-title: Amazing Blog
+title: 'How to beat the market`'
 tagline: This is a Tagline If you want to add.
 preview: >-
   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
