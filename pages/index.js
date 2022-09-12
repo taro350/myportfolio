@@ -104,7 +104,7 @@ export default function Home() {
           <Socials className="mt-2 laptop:mt-5" />
         </div>
 
-        {/* Work */}
+        {/* Projects */}
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           <h1 className="text-2xl text-bold">Work.</h1>
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
@@ -142,8 +142,8 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Footer */}
-        <Footer />
+        {/* Footer : Enable if I start business.Lol */}
+        {/* <Footer /> */}
       </div>
     </div>
   );
