@@ -23,21 +23,21 @@
       "id": "2",
       "title": "Map animation",
       "description": "Animation",
-      "imageSrc": "https://www.canva.com/design/DAFL_78OYEI/view",
+      "imageSrc": "/images/project2_img.png",
       "url": "http://tarottery.com/projects/2"
     },
     {
       "id": "3",
       "title": "Magnifier",
       "description": "Animation",
-      "imageSrc": "https://www.canva.com/design/DAFMANYS9MA/view",
+      "imageSrc": "/images/project3_img.png",
       "url": "http://tarottery.com/projects/3"
     },
     {
       "id": "4",
       "title": "Text animation",
       "description": "Design & Animation",
-      "imageSrc": "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "imageSrc": "/images/project4_img.png",
       "url": "http://tarottery.com/projects/4"
     },
     {
