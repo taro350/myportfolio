@@ -11,13 +11,12 @@ image: >-
 
 # Accessibility improve web interactivity for anyone
 
-## What is accessibility (More details in [Mozilla site](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility))
+## - What is accessibility (More details in [Mozilla site](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility))
 
 > Accessibility is the practice of making your mobile app usable by as many people as possible.
 
----
 
-## Tools that help increase your accessibility
+## - Tools that help increase your accessibility
 
 UI Libraries with Accessibility Support
 1. [Accessibility Inspector for iOS](https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html)
@@ -26,6 +25,6 @@ UI Libraries with Accessibility Support
 
 ---
 
-## Images
+# Get into it!
 
 ![An wall that display accessibility](../images/img_blog1.jpg)

@@ -43,7 +43,7 @@ const BlogPost = ({ post }) => {
           </h1>
           <h2
             ref={textTwo}
-            className="mt-2 text-xl max-w-4xl text-darkgray opacity-50"
+            className="mt-2 text-xl max-w-4xl text-zinc-300 opacity-50"
           >
             {post.tagline}
           </h2>
