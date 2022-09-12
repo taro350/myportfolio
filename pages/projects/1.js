@@ -30,7 +30,7 @@ export default function Project1() {
                     <video controls>
                         <source src="../../videos/collage_anim.mp4" type="video/mp4" />
                         
-                        <p> Yeah </p>
+                        <p> paper animation with collage </p>
                     </video>
                 
                 </div>
