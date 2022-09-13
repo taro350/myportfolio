@@ -3,7 +3,7 @@ date: '2022-07-24T11:50:54.000Z'
 title: Use curl with VPN interface
 tagline: If you're using VPN and want to use the interface with curl
 preview: >-
-  How curl work with VPN interface  
+  How curl works with VPN interface  
 image: >-
   https://images.unsplash.com/photo-1656188505561-19f1a1b6cda8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80
 ---
@@ -53,4 +53,4 @@ IPv4 network interface information
 ...
 ```
 
-There you have it. Have a great day!
+There you have it.` Have a great day!
