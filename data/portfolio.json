@@ -1,1 +1,104 @@
-{"name":"Taro","headerTaglineOne":"Hello 👋","headerTaglineTwo":"I'm Taro Saika","headerTaglineThree":"designer and devloper","headerTaglineFour":" based in Japan.","showBlog":true,"darkMode":true,"showResume":true,"socials":[{"id":"1","title":"Course","link":"https://manabuyo.club"},{"id":"2","title":"Blog","link":"https://tarottery.com/blog"},{"id":"661521a9-3eeb-46fa-a03f-585ae440c119","title":"YouTube","link":"https://www.youtube.com/channel/UCQZYQ5enI89Gf5Z9I6qcbRg"}],"projects":[{"id":"1","title":"Paper animation","description":"Design & Animation","imageSrc":"/images/project1_img.png","url":"http://tarottery.com/projects/1"},{"id":"2","title":"Map animation","description":"Animation","imageSrc":"/images/project2_img.png","url":"http://tarottery.com/projects/2"},{"id":"3","title":"Magnifier","description":"Animation","imageSrc":"/images/project3_img.png","url":"http://tarottery.com/projects/3"},{"id":"4","title":"Text animation","description":"Design & Animation","imageSrc":"/images/project4_img.png","url":"http://tarottery.com/projects/4"},{"id":"5","title":"Keyboard animation","description":"Design & Animation","imageSrc":"/images/project5_img.png","url":"http://tarottery.com/projects/5"},{"id":"6","title":"Meteor","description":"Design & Animation","imageSrc":"/images/project6_img.png","url":"http://tarottery.com/projects/6"},{"id":"7","title":"Urban city","description":"Animation","imageSrc":"/images/project7_img.png","url":"http://tarottery.com/projects/7"},{"id":"8","title":"Cheering up","description":"Design & Animation","imageSrc":"/images/project8_img.png","url":"http://tarottery.com/projects/8"}],"services":[{"id":"1","title":"Motion Graphics","description":"I help with creating motion graphics based on your design!"}],"aboutpara":"I love to create design that makes people excited! Let's take a look at my projects!","resume":{"tagline":"👋  I'm enthusiastic about design and user experience.","description":"I created my website and e-learning course myself. Well-versed with React, Javascript, and most of the Web frameworks.","experiences":[],"education":{"universityName":"Naga high-school","universityDate":"2011-2014","universityPara":"High-school diploma"},"languages":["Javascript","HTML5","CSS","TypeScript","Python"],"frameworks":["Remix","Next.js"],"others":["Adobe After Effects","Blender","Photopea","Davinch Resolve","Houdini"]}}
+{
+  "name": "Taro",
+  "headerTaglineOne": "Hello 👋",
+  "headerTaglineTwo": "I'm Taro Saika",
+  "headerTaglineThree": "designer and devloper",
+  "headerTaglineFour": " based in Japan.",
+  "showBlog": true,
+  "darkMode": true,
+  "showResume": true,
+  "socials": [
+    { "id": "1", "title": "Course", "link": "https://manabuyo.club" },
+    { "id": "2", "title": "Blog", "link": "https://tarottery.com/blog" },
+    {
+      "id": "661521a9-3eeb-46fa-a03f-585ae440c119",
+      "title": "YouTube",
+      "link": "https://www.youtube.com/channel/UCQZYQ5enI89Gf5Z9I6qcbRg"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Paper animation",
+      "description": "Design & Animation",
+      "imageSrc": "/images/project1_img.png",
+      "url": "http://tarottery.com/projects/1"
+    },
+    {
+      "id": "2",
+      "title": "Map animation",
+      "description": "Animation",
+      "imageSrc": "/images/project2_img.png",
+      "url": "http://tarottery.com/projects/2"
+    },
+    {
+      "id": "3",
+      "title": "Magnifier",
+      "description": "Animation",
+      "imageSrc": "/images/project3_img.png",
+      "url": "http://tarottery.com/projects/3"
+    },
+    {
+      "id": "4",
+      "title": "Text animation",
+      "description": "Design & Animation",
+      "imageSrc": "/images/project4_img.png",
+      "url": "http://tarottery.com/projects/4"
+    },
+    {
+      "id": "5",
+      "title": "Keyboard animation",
+      "description": "Design & Animation",
+      "imageSrc": "/images/project5_img.png",
+      "url": "http://tarottery.com/projects/5"
+    },
+    {
+      "id": "6",
+      "title": "Meteor",
+      "description": "Design & Animation",
+      "imageSrc": "/images/project6_img.png",
+      "url": "http://tarottery.com/projects/6"
+    },
+    {
+      "id": "7",
+      "title": "Urban city",
+      "description": "Animation",
+      "imageSrc": "/images/project7_img.png",
+      "url": "http://tarottery.com/projects/7"
+    },
+    {
+      "id": "8",
+      "title": "Cheering up",
+      "description": "Design & Animation",
+      "imageSrc": "/images/project8_img.png",
+      "url": "http://tarottery.com/projects/8"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Motion Graphics",
+      "description": "I help with creating motion graphics based on your design!"
+    }
+  ],
+  "aboutpara": "I love to create design that makes people excited! Let's take a look at my projects!",
+  "resume": {
+    "tagline": "👋  I'm enthusiastic about design and user experience.",
+    "description": "I created my website and e-learning course myself. Well-versed with React, Javascript, and most of the Web frameworks.",
+    "experiences": [],
+    "education": {
+      "universityName": "Naga high-school",
+      "universityDate": "2011-2014",
+      "universityPara": "High-school diploma"
+    },
+    "languages": ["Javascript", "HTML5", "CSS", "TypeScript", "Python"],
+    "frameworks": ["Remix", "Next.js"],
+    "others": [
+      "Adobe After Effects",
+      "Blender",
+      "Photopea",
+      "Davinch Resolve",
+      "Houdini"
+    ]
+  }
+}
