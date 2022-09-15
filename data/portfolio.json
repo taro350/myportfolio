@@ -53,6 +53,20 @@
       "description": "Design & Animation",
       "imageSrc": "/images/project6_img.png",
       "url": "http://tarottery.com/projects/6"
+    },
+    {
+      "id": "7",
+      "title": "Urban city",
+      "description": "Animation",
+      "imageSrc": "/images/project7_img.png",
+      "url": "http://tarottery.com/projects/7"
+    },
+    {
+      "id": "8",
+      "title": "Cheering up",
+      "description": "Design & Animation",
+      "imageSrc": "/images/project8_img.png",
+      "url": "http://tarottery.com/projects/8"
     }
   ],
   "services": [
