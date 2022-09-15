@@ -24,7 +24,7 @@ lo0 : flags=...
 gif0 : flags=...
 ```
 
-In my case, I use macbook so I prefer to choose `ip`.
+In my case, I use macbook so I prefer to choose ``ip`.
 ```
 ip l show
 ```
