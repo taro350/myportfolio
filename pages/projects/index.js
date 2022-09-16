@@ -25,7 +25,7 @@ export default function Projects() {
               ref={text}
               className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-flil"
             >
-              <Link href="/" >Go home</Link>
+              Projects
             </h1>
             <ul>
               <li>
