@@ -39,7 +39,7 @@ export default function Projects() {
             >
               Projects.
             </h1>
-            <ul>
+            <ul className="mt-4">
               <li>
                 <Link href="/projects/1" >Paper animation</Link>
               </li>
