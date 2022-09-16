@@ -15,7 +15,7 @@ export default function Project1() {
     return (
           <>
             <Head>
-              <title>Project 6</title>
+              <title>Project 8</title>
             </Head>
             <div className="container mx-auto mb-10">
               <Header></Header>
