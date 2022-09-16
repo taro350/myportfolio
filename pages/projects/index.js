@@ -3,10 +3,22 @@ import Link from "next/link";
 
 import { useRef, useState, useEffect } from "react";
 import Header from "../../components/Header";
+import { stagger } from "../../animations";
+import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 
 export default function Projects() {
     const [mounted, setMounted] = useState(false);
     const text = useRef();
+    
+
+    useIsomorphicLayoutEffect(() => {
+      stagger(
+        [text.current],
+        { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
+        { y: 0, x: 0, transform: "scale(1)" }
+      );
+      
+    }, []);
 
     useEffect(() => {
         setMounted(true);
@@ -16,7 +28,7 @@ export default function Projects() {
     return (
       <>
         <Head>
-          <title>Project 1</title>
+          <title>Projects</title>
         </Head>
         <div className="container mx-auto mb-10">
           <Header></Header>
@@ -25,7 +37,7 @@ export default function Projects() {
               ref={text}
               className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-flil"
             >
-              Projects
+              Projects.
             </h1>
             <ul>
               <li>

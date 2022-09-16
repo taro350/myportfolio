@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
 import ProjectResume from "../components/ProjectResume";
@@ -9,10 +9,23 @@ import { useTheme } from "next-themes";
 import { name, showResume } from "../data/portfolio.json";
 import { resume } from "../data/portfolio.json";
 
+import { stagger } from "../animations";
+import { ISOToDate, useIsomorphicLayoutEffect } from "../utils";
+
 const Resume = () => {
   const router = useRouter();
   const theme = useTheme();
   const [mount, setMount] = useState(false);
+  const text = useRef();
+
+  useIsomorphicLayoutEffect(() => {
+    stagger(
+      [text.current],
+      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
+      { y: 0, x: 0, transform: "scale(1)" }
+    );
+    
+  }, []);
 
   useEffect(() => {
     setMount(true);
@@ -20,6 +33,8 @@ const Resume = () => {
       router.push("/");
     }
   }, [router]);
+
+
   return (
     <>
       {process.env.NODE_ENV === "development" && (
@@ -32,6 +47,11 @@ const Resume = () => {
 
       <div className="container mx-auto mb-10">
         <Header isBlog />
+        <div className="mt-10">
+          <h1 ref={text} className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-flil">
+              About me.
+          </h1>
+        </div>
         {mount && (
           <div className="mt-10 w-full flex flex-col items-center">
             <div
