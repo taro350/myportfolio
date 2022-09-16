@@ -30,17 +30,21 @@ const BlogPost = ({ post }) => {
       
       <div className="container mx-auto mt-10">
         <Header isBlog={true} />
+
+        {/* img, title, and tagline */}
         <div className="mt-10 flex flex-col">
           <img
             className="w-full h-96 rounded-lg shadow-lg object-cover"
             src={post.image}
           ></img>
+          {/* title */}
           <h1
             ref={textOne}
             className="mt-10 text-4xl mob:text-2xl laptop:text-6xl text-bold"
           >
             {post.title}
           </h1>
+          {/* tagline */}
           <h2
             ref={textTwo}
             className="mt-2 text-xl max-w-4xl text-zinc-300 opacity-50"
@@ -48,7 +52,10 @@ const BlogPost = ({ post }) => {
             {post.tagline}
           </h2>
         </div>
+
+        {/* content */}
         <ContentSection content={post.content}></ContentSection>
+
         {/* Footer : Enable if I start business! */}
         {/* <Footer /> */}
       </div>

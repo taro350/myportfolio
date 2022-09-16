@@ -67,6 +67,7 @@ export default function Home() {
       <div className="gradient-circle-bottom"></div>
 
       <div className="container mx-auto mb-10">
+        {/* Header: Work About Blog Resume  */}
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}

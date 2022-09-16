@@ -23,37 +23,37 @@ export default function Projects() {
           <div className="mt-10">
             <h1
               ref={text}
-              className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
+              className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-flil"
             >
               <Link href="/" >Go home</Link>
             </h1>
-            <li>
-              <ul>
+            <ul>
+              <li>
                 <Link href="/projects/1" >Paper animation</Link>
-              </ul>
-              <ul>
+              </li>
+              <li>
                 <Link href="/projects/2" >Map animation</Link>
-              </ul>
-              <ul>
+              </li>
+              <li>
                 <Link href="/projects/3" >Magnifier</Link>
-              </ul>
-              <ul>
+              </li>
+              <li>
                 <Link href="/projects/4" >Text animation</Link>
-              </ul>
-              <ul>
+              </li>
+              <li>
                 <Link href="/projects/5" >Keyboard animation</Link>
-              </ul>
-              <ul>
+              </li>
+              <li>
                 <Link href="/projects/6" >Meteor</Link>
-              </ul>
-              <ul>
+              </li>
+              <li>
                 <Link href="/projects/7" >Urban city</Link>
-              </ul>
-              <ul>
+              </li>
+              <li>
                 <Link href="/projects/8" >Cheering up</Link>
-              </ul>
+              </li>
              
-            </li>
+            </ul>
           </div>
         </div>
 
