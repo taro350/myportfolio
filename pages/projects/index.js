@@ -1,10 +1,12 @@
+import { useRef, useState, useEffect } from "react";
+
 import Head from "next/head";
 import Link from "next/link";
 
-import { useRef, useState, useEffect } from "react";
 import Header from "../../components/Header";
-import { stagger } from "../../animations";
+
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
+import { stagger } from "../../animations";
 
 export default function Projects() {
     const [mounted, setMounted] = useState(false);
