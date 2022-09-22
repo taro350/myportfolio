@@ -14,6 +14,7 @@ import { getPostBySlug, getAllPosts } from "../../utils/api";
 import { useIsomorphicLayoutEffect } from "../../utils";
 
 import { stagger } from "../../animations";
+import Image from "next/image";
 
 
 
@@ -40,10 +41,10 @@ const BlogPost = ({ post }) => {
 
         {/* img, title, and tagline */}
         <div className="mt-10 flex flex-col">
-          <img
+          <Image
             className="w-full h-96 rounded-lg shadow-lg object-cover"
             src={post.image}
-          ></img>
+          ></Image>
           {/* title */}
           <h1
             ref={textOne}
