@@ -11,7 +11,7 @@ import MyFooter from "../../components/Footer/MyFooter";
 // import BlogEditor from "../../components/BlogEditor";
 
 import { getProjectBySlug, getAllProjects } from "../../utils/api";
-import { useIsomorphicLayoutEffect } from "../../utils";
+import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 
 import { stagger } from "../../animations";
 
@@ -42,7 +42,9 @@ const Project = ({ project }) => {
             >
                 {project.title}
             </h1>
-            <p ref={textTwo}>{project.date}</p>
+            <span ref={textTwo} className="text-sm mt-5 opacity-25">
+                      {ISOToDate(project.date)}
+            </span>
             <div className="mt-10 flex justify-center content-center">
                 <video muted autoPlay poster={project.poster} 
                     className="object-cover">

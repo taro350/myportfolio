@@ -88,9 +88,11 @@ const Blog = ({ posts }) => {
                     onClick={() => Router.push(`/blog/${post.slug}`)}
                   >
                     <Image
-                      className="w-full h-60 rounded-lg shadow-lg object-cover"
                       src={post.image}
                       alt={post.title}
+                      width="100%" height="24rem" layout="responsive"
+                      objectFit="cover"
+                      className="rounded-lg shadow-lg"
                     ></Image>
                     <h2 className="mt-5 text-4xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-lg">{post.preview}</p>

@@ -42,9 +42,12 @@ const BlogPost = ({ post }) => {
         {/* img, title, and tagline */}
         <div className="mt-10 flex flex-col">
           <Image
-            className="w-full h-96 rounded-lg shadow-lg object-cover"
             src={post.image}
-          ></Image>
+            alt={post.title} 
+            width="100%" height="24rem" layout="responsive" 
+            objectFit="cover"
+            className="rounded-lg shadow-lg"
+          />
           {/* title */}
           <h1
             ref={textOne}
