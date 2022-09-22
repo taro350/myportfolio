@@ -8,6 +8,13 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
+const projectsDirectory = join(process.cwd(), "_projects");
+
+export function getProjectSlugs() {
+  return fs.readdirSync(projectsDirectory);
+}
+
+
 export function getPostBySlug(slug, fields = []) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
@@ -33,6 +40,32 @@ export function getPostBySlug(slug, fields = []) {
   return items;
 }
 
+export function getProjectBySlug(slug, fields = []) {
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(projectsDirectory, `${realSlug}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
+
+  const items = {};
+
+  // Ensure only the minimal needed data is exposed
+  fields.forEach((field) => {
+    if (field === "slug") {
+      items[field] = realSlug;
+    }
+    if (field === "content") {
+      items[field] = content;
+    }
+
+    if (typeof data[field] !== "undefined") {
+      items[field] = data[field];
+    }
+  });
+
+  return items;
+}
+
+
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs();
   const posts = slugs
@@ -41,3 +74,12 @@ export function getAllPosts(fields = []) {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }
+
+export function getAllProjects(fields = []) {
+  const slugs = getProjectSlugs();
+  const projects = slugs
+    .map((project) => getProjectBySlug(project, fields))
+    .sort((project1, project2) => (project1.date > project2.date ? -1 : 1));
+  return projects;
+}
+

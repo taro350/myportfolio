@@ -12,6 +12,7 @@ import Link from "next/link";
 
 // Local Data
 import data from "../data/portfolio.json";
+import MyFooter from "../components/Footer/MyFooter";
 
 export default function Home() {
   // Ref
@@ -63,8 +64,10 @@ export default function Home() {
           </div>
         )
       }
+
+      {/* Gradient top and buttom */}
       <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
+      {/* <div className="gradient-circle-bottom"></div> */}
 
       <div className="container mx-auto mb-10">
         {/* Header: Work About Blog Resume  */}
@@ -142,6 +145,8 @@ export default function Home() {
             {data.aboutpara}
           </p>
         </div>
+
+        <MyFooter/>
 
         {/* Footer : Enable if I start business.Lol */}
         {/* <Footer /> */}

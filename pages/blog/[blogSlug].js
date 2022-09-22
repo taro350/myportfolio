@@ -1,14 +1,21 @@
 import React, { useRef, useState } from "react";
-import { getPostBySlug, getAllPosts } from "../../utils/api";
+
+import { useRouter } from "next/router";
+import Head from "next/head";
+
 import Header from "../../components/Header";
 import ContentSection from "../../components/ContentSection";
-import Footer from "../../components/Footer";
-import Head from "next/head";
-import { useIsomorphicLayoutEffect } from "../../utils";
-import { stagger } from "../../animations";
+// import Footer from "../../components/Footer";
+// import MyFooter from "../../components/Footer/MyFooter";
 import Button from "../../components/Button";
 import BlogEditor from "../../components/BlogEditor";
-import { useRouter } from "next/router";
+
+import { getPostBySlug, getAllPosts } from "../../utils/api";
+import { useIsomorphicLayoutEffect } from "../../utils";
+
+import { stagger } from "../../animations";
+
+
 
 
 const BlogPost = ({ post }) => {
@@ -79,7 +86,7 @@ const BlogPost = ({ post }) => {
 };
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
+  const post = getPostBySlug(params.blogSlug, [
     "date",
     "slug",
     "preview",
@@ -106,7 +113,7 @@ export async function getStaticPaths() {
     paths: posts.map((post) => {
       return {
         params: {
-          slug: post.slug,
+          blogSlug: post.slug,
         },
       };
     }),
