@@ -35,7 +35,7 @@ If you're using your component like this
 ```
 Then the error occurs:
 
-``Property 'myprop' is missing in type '{ children: string; className: string; }' but required in type 'Pick<Props, "myprop" | "key" | keyof HTMLAttributes<HTMLButtonElement>>'.``
+### ******* Error:``Property 'myprop' is missing in type '{ children: string; className: string; }' but required in type 'Pick<Props, "myprop" | "key" | keyof HTMLAttributes<HTMLButtonElement>>'.`` *******
 
 And even if you specify `key` and attributes of <button> element like this:
 ```
@@ -50,5 +50,5 @@ The error goes away and you can still use children out of the box with `type Pro
 
 --- 
 
-Have a good day!
+Have a good day!🎂
 
