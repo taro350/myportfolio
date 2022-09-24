@@ -19,11 +19,11 @@ type Props = {
 ```
 
 # 2
-Use `PropsWithChildren<P>`
+Use `React.PropsWithChildren<P>`
 
 > type PropsWithChildren<P> = P & {children? : ReactNode}  
 
-This provides 'children' for us
+This provides 'children' for us.
 
 Ex.
 ```
