@@ -33,7 +33,7 @@ export default function Projects() {
           <title>Projects</title>
         </Head>
         <div className="container mx-auto mb-10">
-          <Header></Header>
+          <Header/>
           <div className="mt-10">
             <h1
               ref={text}

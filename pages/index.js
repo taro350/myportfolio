@@ -144,6 +144,7 @@ export default function Home() {
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
             {data.aboutpara}
           </p>
+          <button className="btn-38">hi</button>
         </div>
 
         <MyFooter/>

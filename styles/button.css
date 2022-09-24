@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-38 {
+       
+        border: 1px solid;
+        box-sizing: border-box;
+    }
+  }
+  
