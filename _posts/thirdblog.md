@@ -2,15 +2,13 @@
 date: '2022-09-22T05:43:54.960Z'
 title: Comply 'children' in TypeScript
 tagline: Solve 'children'
-preview: >-
-  Comply 'children' in TypeScript with types provided by React
-image: >-
-  /images/project1_img.png
+preview: Comply 'children' in TypeScript with types provided by React
+image: /images/project1_img.png
 ---
 
 # How you deal with `children` in TypeScript
 
-1)
+# 1
 Use `React.ReactNode`
 
 Ex.
@@ -20,7 +18,7 @@ type Props = {
 }
 ```
 
-2)
+# 2
 Use `PropsWithChildren<P>`
 
 > type PropsWithChildren<P> = P & {children? : ReactNode}  
@@ -43,7 +41,7 @@ And even if you specify `key` and attributes of <button> element like this:
 ```
 <FancyButton key={something} type="submit">Hi</FancyButton>
 ```
-It still complains because your `myprop` has not specified yet. When you don't particularily need any props, you just can go like this:
+It *still* complains because your `myprop` has **not** specified **yet**. When you don't particularily need any props, you just can go like this:
 ```
 type Props = React.PropsWithChildren<{}>
 ```
