@@ -6,6 +6,8 @@ import { useTheme } from "next-themes";
 
 // Data
 import yourData from "../data/portfolio.json";
+import dataConfig from "../data/portfolio_config.json";
+
 
 const Edit = () => {
   // states
@@ -282,15 +284,15 @@ const Edit = () => {
               <label className="w-1/5 text-lg opacity-50">Blog</label>
               <div className="w-4/5 ml-10 flex items-center">
                 <Button
-                  onClick={() => setData({ ...data, showBlog: true })}
-                  type={data.showBlog && "primary"}
+                  onClick={() => setData({ ...data, ...dataConfig, showBlog: true })}
+                  type={dataConfig.showBlog && "primary"}
                 >
                   Yes
                 </Button>
                 <Button
-                  onClick={() => setData({ ...data, showBlog: false })}
+                  onClick={() => setData({ ...data, ...dataConfig, showBlog: false })}
                   classes={
-                    !data.showBlog && "bg-red-500 text-white hover:bg-red-600"
+                    !dataConfig.showBlog && "bg-red-500 text-white hover:bg-red-600"
                   }
                 >
                   No
@@ -301,15 +303,15 @@ const Edit = () => {
               <label className="w-1/5 text-lg opacity-50">Dark Mode</label>
               <div className="w-4/5 ml-10 flex items-center">
                 <Button
-                  onClick={() => setData({ ...data, darkMode: true })}
-                  type={data.darkMode && "primary"}
+                  onClick={() => setData({ ...data, ...dataConfig, darkMode: true })}
+                  type={dataConfig.darkMode && "primary"}
                 >
                   Yes
                 </Button>
                 <Button
-                  onClick={() => setData({ ...data, darkMode: false })}
+                  onClick={() => setData({ ...data, ...dataConfig, darkMode: false })}
                   classes={
-                    !data.darkMode && "bg-red-500 text-white hover:bg-red-600"
+                    !dataConfig.darkMode && "bg-red-500 text-white hover:bg-red-600"
                   }
                 >
                   No
@@ -320,15 +322,15 @@ const Edit = () => {
               <label className="w-1/5 text-lg opacity-50">Show Resume</label>
               <div className="w-4/5 ml-10 flex items-center">
                 <Button
-                  onClick={() => setData({ ...data, showResume: true })}
-                  type={data.showResume && "primary"}
+                  onClick={() => setData({ ...data, ...dataConfig, showResume: true })}
+                  type={dataConfig.showResume && "primary"}
                 >
                   Yes
                 </Button>
                 <Button
-                  onClick={() => setData({ ...data, showResume: false })}
+                  onClick={() => setData({ ...data, ...dataConfig, showResume: false })}
                   classes={
-                    !data.showResume && "bg-red-500 text-white hover:bg-red-600"
+                    !dataConfig.showResume && "bg-red-500 text-white hover:bg-red-600"
                   }
                 >
                   No

@@ -1,4 +1,5 @@
 ---
+blogId : 2second
 date: '2022-07-24T11:50:54.000Z'
 title: Use curl with VPN interface
 tagline: If you're using VPN and want to use the interface with curl

@@ -122,6 +122,10 @@ export default function Home() {
               />
             ))}
           </div>
+          <a href="http://tarottery.com/projects">
+            
+            <button className="btn-57 top-5 flex m-auto">More projects</button>
+          </a>
         </div>
 
         {/* Service */}
@@ -144,7 +148,6 @@ export default function Home() {
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
             {data.aboutpara}
           </p>
-          <button className="btn-38">hi</button>
         </div>
 
         <MyFooter/>

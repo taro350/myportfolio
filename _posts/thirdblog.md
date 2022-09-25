@@ -1,4 +1,5 @@
 ---
+blogId : 3third
 date: '2022-09-22T05:43:54.960Z'
 title: Comply 'children' in TypeScript
 tagline: Solve 'children'

@@ -6,8 +6,8 @@ import Socials from "../components/Socials";
 import Button from "../components/Button";
 import { useTheme } from "next-themes";
 // Data
-import { name, showResume } from "../data/portfolio.json";
-import { resume } from "../data/portfolio.json";
+import { name, resume } from "../data/portfolio.json";
+import { showResume } from "../data/portfolio_config.json";
 
 import { stagger } from "../animations";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../utils";

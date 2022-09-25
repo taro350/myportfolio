@@ -5,13 +5,13 @@ import { useEffect, useRef, useState } from "react";
 import { stagger } from "../../animations";
 import Button from "../../components/Button";
 import Header from "../../components/Header";
-import data from "../../data/portfolio.json";
+import dataConfig from "../../data/portfolio_config.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
 
 
 const Blog = ({ posts }) => {
-  const showBlog = useRef(data.showBlog);
+  const showBlog = useRef(dataConfig.showBlog);
   const text = useRef();
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
@@ -45,23 +45,7 @@ const Blog = ({ posts }) => {
     }
   };
 
-  const deleteBlog = (slug) => {
-    if (process.env.NODE_ENV === "development") {
-      fetch("/api/blog", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          slug,
-        }),
-      }).then(() => {
-        router.reload(window.location.pathname);
-      });
-    } else {
-      alert("This thing only works in development mode.");
-    }
-  };
+  
   
   return (
     showBlog.current && (
@@ -80,44 +64,20 @@ const Blog = ({ posts }) => {
               Blog.
             </h1>
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
-              {posts &&
+              {
+              posts &&
                 posts.map((post) => (
-                  <div
-                    className="cursor-pointer relative"
-                    key={post.slug}
-                    onClick={() => Router.push(`/blog/${post.slug}`)}
-                  >
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      width="100%" height="24rem" layout="responsive"
-                      objectFit="cover"
-                      className="rounded-lg shadow-lg"
-                    ></Image>
-                    <h2 className="mt-5 text-4xl">{post.title}</h2>
-                    <p className="mt-2 opacity-50 text-lg">{post.preview}</p>
-                    <span className="text-sm mt-5 opacity-25">
-                      {ISOToDate(post.date)}
-                    </span>
-
-                    {/* Delete button */}
-                    {
-                      process.env.NODE_ENV === "development" && mounted && (
-                        <div className="absolute top-0 right-0">
-                          <Button
-                            onClick={(e) => {
-                              deleteBlog(post.slug);
-                              e.stopPropagation();
-                            }}
-                            type={"primary"}
-                          >
-                            Delete
-                          </Button>
-                        </div>
-                      )
-                    }
-                  </div>
-                ))}
+                  <BlogCard 
+                    slug={post.slug} 
+                    key={post.blogId}
+                    image={post.image}
+                    title={post.title}
+                    preview={post.preview}
+                    date={post.date} 
+                    mounted={post.mounted}
+                    />
+                ))
+              }
             </div>
           </div>
         </div>
@@ -136,9 +96,72 @@ const Blog = ({ posts }) => {
   );
 };
 
+export function BlogCard({slug, image, title, preview, date, mounted}) {
+
+  const deleteBlog = (slug) => {
+    if (process.env.NODE_ENV === "development") {
+      fetch("/api/blog", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          slug,
+        }),
+      }).then(() => {
+        router.reload(window.location.pathname);
+      });
+    } else {
+      alert("This thing only works in development mode.");
+    }
+  };
+
+  return (
+
+    <div
+      className="cursor-pointer relative"
+      key={slug}
+      onClick={() => Router.push(`/blog/${slug}`)}
+    >
+      <Image
+        src={image}
+        alt={title}
+        width="100%" height="24rem" layout="responsive"
+        objectFit="cover"
+        className="rounded-lg shadow-lg"
+      ></Image>
+      <h2 className="mt-5 text-4xl">{title}</h2>
+      <p className="mt-2 opacity-50 text-lg">{preview}</p>
+      <span className="text-sm mt-5 opacity-25">
+        {ISOToDate(date)}
+      </span>
+      
+
+      {/* Delete button */}
+      {
+        process.env.NODE_ENV === "development" && mounted && (
+          <div className="absolute top-0 right-0">
+            <Button
+              onClick={(e) => {
+                deleteBlog(slug);
+                e.stopPropagation();
+              }}
+              type={"primary"}
+            >
+              Delete
+            </Button>
+          </div>
+        )
+      }
+    </div>
+    )
+  
+}
+
 export async function getStaticProps() {
   const posts = getAllPosts([
     "slug",
+    "blogId",
     "title",
     "image",
     "preview",

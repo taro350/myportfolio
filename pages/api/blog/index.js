@@ -8,11 +8,13 @@ import { getRandomImage } from "../../../utils";
 
 export default function handler(req, res) {
   // target to write
-  const postsfolder = join(process.cwd(), `/_posts/${uuidv4()}.md`);
+  const generatedId = uuidv4()
+  const postsfolder = join(process.cwd(), `/_posts/${id}.md`);
   
   if (process.env.NODE_ENV === "development") {
     if (req.method === "POST") {
       const data = matter.stringify("# New Blog", {
+        blogId : generatedId,
         date: new Date().toISOString(),
         title: "New Blog",
         tagline: "Amazing New Blog",

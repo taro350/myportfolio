@@ -1,4 +1,5 @@
 ---
+blogId : 1first
 date: '2022-07-15T11:50:54.000Z'
 title: Why Accessibility is Important
 tagline: Accessibility as a First-Class Citizen

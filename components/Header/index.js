@@ -5,13 +5,15 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
+import dataConfig from "../../data/portfolio_config.json";
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const { name, showBlog, showResume } = data;
+  const { name } = data;
+  const { showBlog, showResume, darkMode } = dataConfig;
 
   useEffect(() => {
     setMounted(true);
@@ -31,7 +33,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </h1>
 
               <div className="flex items-center">
-                {data.darkMode && (
+                {darkMode && (
                   <Button
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
@@ -137,7 +139,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             )}
 
             
-            {mounted && theme && data.darkMode && (
+            {mounted && theme && darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
@@ -164,7 +166,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             )}
 
 
-            {mounted && theme && data.darkMode && (
+            {mounted && theme && darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
