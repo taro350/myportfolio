@@ -9,7 +9,7 @@ import { getRandomImage } from "../../../utils";
 export default function handler(req, res) {
   // target to write
   const generatedId = uuidv4()
-  const postsfolder = join(process.cwd(), `/_posts/${generatedId}.mdx`);
+  const postsfolder = join(process.cwd(), `/_posts/${generatedId}.md`);
   
   if (process.env.NODE_ENV === "development") {
     if (req.method === "POST") {
@@ -26,7 +26,7 @@ export default function handler(req, res) {
       res.status(200).json({ status: "CREATED" });
     }
     if (req.method === "DELETE") {
-      const deleteFile = join(process.cwd(), `/_posts/${req.body.slug}.mdx`);
+      const deleteFile = join(process.cwd(), `/_posts/${req.body.slug}.md`);
       fs.unlinkSync(deleteFile);
       res.status(200).json({ status: "DONE" });
     }

@@ -16,8 +16,8 @@ export function getProjectSlugs() {
 
 
 export function getPostBySlug(slug, fields = []) {
-  const realSlug = slug.replace(/\.mdx$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.mdx`);
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
@@ -41,8 +41,8 @@ export function getPostBySlug(slug, fields = []) {
 }
 
 export function getProjectBySlug(slug, fields = []) {
-  const realSlug = slug.replace(/\.mdx$/, "");
-  const fullPath = join(projectsDirectory, `${realSlug}.mdx`);
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(projectsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
