@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Image from "next/image";
 import Router, { useRouter } from "next/router";
@@ -70,6 +71,7 @@ const Blog = ({ posts }) => {
                   <BlogCard 
                     slug={post.slug} 
                     key={post.blogId}
+                    
                     image={post.image}
                     title={post.title}
                     preview={post.preview}
@@ -96,7 +98,7 @@ const Blog = ({ posts }) => {
   );
 };
 
-export function BlogCard({slug, image, title, preview, date, mounted}) {
+export function BlogCard({slug, blogId, image, title, preview, date, mounted}) {
 
   const deleteBlog = (slug) => {
     if (process.env.NODE_ENV === "development") {
@@ -123,13 +125,11 @@ export function BlogCard({slug, image, title, preview, date, mounted}) {
       key={slug}
       onClick={() => Router.push(`/blog/${slug}`)}
     >
-      <Image
+      <img
         src={image}
         alt={title}
-        width="100%" height="24rem" layout="responsive"
-        objectFit="cover"
-        className="rounded-lg shadow-lg"
-      ></Image>
+        className="w-full h-24 rounded-lg shadow-lg object-cover"
+      />
       <h2 className="mt-5 text-4xl">{title}</h2>
       <p className="mt-2 opacity-50 text-lg">{preview}</p>
       <span className="text-sm mt-5 opacity-25">

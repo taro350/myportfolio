@@ -8,7 +8,7 @@ export default function handler(req, res) {
     if (req.method === "POST") {
       const { date, title, tagline, preview, image } = req.body.variables;
       fs.writeFile(
-        postsfolder + req.body.slug + ".md",
+        postsfolder + req.body.slug + ".mdx",
         matter.stringify(req.body.content, {
           date,
           title,
