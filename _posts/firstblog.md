@@ -4,8 +4,7 @@ date: '2022-07-15T11:50:54.000Z'
 title: Why Accessibility is Important
 tagline: Accessibility as a First-Class Citizen
 preview: >-
-  How we can make sure what we ship is going to meet various options of
-  accessibility? 
+  How we can make sure what we ship is going to meet various options of accessibility? 
 image: >-
   /images/accessible.jpg
 
