@@ -696,6 +696,15 @@
     "normalize-path" "^3.0.0"
     "picomatch" "^2.0.4"
 
+"aos@^2.3.4":
+  "integrity" "sha512-zh/ahtR2yME4I51z8IttIt4lC1Nw0ktsFtmeDzID1m9naJnWXhCoARaCgNOGXb5CLy3zm+wqmRAEgMYB5E2HUw=="
+  "resolved" "https://registry.npmjs.org/aos/-/aos-2.3.4.tgz"
+  "version" "2.3.4"
+  dependencies:
+    "classlist-polyfill" "^1.0.3"
+    "lodash.debounce" "^4.0.6"
+    "lodash.throttle" "^4.0.1"
+
 "arg@^5.0.2":
   "integrity" "sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg=="
   "resolved" "https://registry.npmjs.org/arg/-/arg-5.0.2.tgz"
@@ -955,6 +964,11 @@
   "resolved" "https://registry.npmjs.org/chrome-trace-event/-/chrome-trace-event-1.0.3.tgz"
   "version" "1.0.3"
 
+"classlist-polyfill@^1.0.3":
+  "integrity" "sha512-GzIjNdcEtH4ieA2S8NmrSxv7DfEV5fmixQeyTmqmRmRJPGpRBaSnA2a0VrCjyT8iW8JjEdMbKzDotAJf+ajgaQ=="
+  "resolved" "https://registry.npmjs.org/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz"
+  "version" "1.2.0"
+
 "classnames@^2.2.6":
   "integrity" "sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA=="
   "resolved" "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
@@ -1098,6 +1112,13 @@
   "resolved" "https://registry.npmjs.org/defined/-/defined-1.0.0.tgz"
   "version" "1.0.0"
 
+"delegate-it@^3.0.1":
+  "integrity" "sha512-XU8H4pjDGBW74hFIbjdLPnvtU3HF3P9bbZvoFBSBLb5JgNaTkRb/2lvC1V+9kmZsxVR0kad4bU3rYhQ/4Ij+Gw=="
+  "resolved" "https://registry.npmjs.org/delegate-it/-/delegate-it-3.0.1.tgz"
+  "version" "3.0.1"
+  dependencies:
+    "typed-query-selector" "^2.6.1"
+
 "dequal@^2.0.0":
   "integrity" "sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA=="
   "resolved" "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz"
@@ -1158,7 +1179,7 @@
   "resolved" "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz"
   "version" "9.2.2"
 
-"enhanced-resolve@^5.10.0":
+"enhanced-resolve@^5.10.0", "enhanced-resolve@^5.7.0":
   "integrity" "sha512-T0yTFjdpldGY8PmuXXR0PyQ1ufZpEGiHVrp7zHKB7jdR4qlmZHhONVM5AQOAWXuF/w3dnHbEQVrNptJgt7F+cQ=="
   "resolved" "https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.10.0.tgz"
   "version" "5.10.0"
@@ -2199,6 +2220,11 @@
   "resolved" "https://registry.npmjs.org/lodash.castarray/-/lodash.castarray-4.4.0.tgz"
   "version" "4.4.0"
 
+"lodash.debounce@^4.0.6":
+  "integrity" "sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow=="
+  "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
+  "version" "4.0.8"
+
 "lodash.isplainobject@^4.0.6":
   "integrity" "sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA=="
   "resolved" "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz"
@@ -2208,6 +2234,11 @@
   "integrity" "sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ=="
   "resolved" "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   "version" "4.6.2"
+
+"lodash.throttle@^4.0.1":
+  "integrity" "sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ=="
+  "resolved" "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz"
+  "version" "4.1.1"
 
 "lodash@^4.17.11":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
@@ -2722,6 +2753,14 @@
   "resolved" "https://registry.npmjs.org/next-themes/-/next-themes-0.2.0.tgz"
   "version" "0.2.0"
 
+"next-transpile-modules@^9.0.0":
+  "integrity" "sha512-VCNFOazIAnXn1hvgYYSTYMnoWgKgwlYh4lm1pKbSfiB3kj5ZYLcKVhfh3jkPOg1cnd9DP+pte9yCUocdPEUBTQ=="
+  "resolved" "https://registry.npmjs.org/next-transpile-modules/-/next-transpile-modules-9.0.0.tgz"
+  "version" "9.0.0"
+  dependencies:
+    "enhanced-resolve" "^5.7.0"
+    "escalade" "^3.1.1"
+
 "next@*", "next@>=10.2.0", "next@12.1.6":
   "integrity" "sha512-cebwKxL3/DhNKfg9tPZDQmbRKjueqykHHbgaoG4VBRH3AHQJ2HO0dbKFiS1hPhe1/qgc2d/hFeadsbPicmLD+A=="
   "resolved" "https://registry.npmjs.org/next/-/next-12.1.6.tgz"
@@ -2831,6 +2870,11 @@
   "version" "1.4.0"
   dependencies:
     "wrappy" "1"
+
+"opencollective-postinstall@^2.0.2":
+  "integrity" "sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q=="
+  "resolved" "https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz"
+  "version" "2.0.3"
 
 "optionator@^0.9.1":
   "integrity" "sha512-74RlY5FCnhq4jRxVUPKDaRwrVNXMqsGsiW6AJw4XK8hmtm10wC0ypZBLw5IIp85NZMr91+qd1RvvENwg7jjRFw=="
@@ -3534,6 +3578,14 @@
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
 
+"swup@^2.0.19":
+  "integrity" "sha512-cyqcVG5ZlIwqRjvLhZvYFBoc8vDDZ5V0OMthTOa7OE/xowzqyhGRJ2hvFr6ecnJfpiTJGN5CIq+Ep2G7ty9gcw=="
+  "resolved" "https://registry.npmjs.org/swup/-/swup-2.0.19.tgz"
+  "version" "2.0.19"
+  dependencies:
+    "delegate-it" "^3.0.1"
+    "opencollective-postinstall" "^2.0.2"
+
 "tailwindcss@^3.0.24", "tailwindcss@>=3.0.0 || insiders":
   "integrity" "sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g=="
   "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.1.8.tgz"
@@ -3648,6 +3700,11 @@
   "integrity" "sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ=="
   "resolved" "https://registry.npmjs.org/type-fest/-/type-fest-0.20.2.tgz"
   "version" "0.20.2"
+
+"typed-query-selector@^2.6.1":
+  "integrity" "sha512-jo9NLGQ0b7sT9TK3mxzemATQqTb/uh8TRvcOK6WSwKNewALt3AA8q2m7cdpF/uUbd/cdixaBxCGe6fpzpEWbGw=="
+  "resolved" "https://registry.npmjs.org/typed-query-selector/-/typed-query-selector-2.8.0.tgz"
+  "version" "2.8.0"
 
 "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta", "typescript@>=3.3.1":
   "integrity" "sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw=="

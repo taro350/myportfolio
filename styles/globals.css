@@ -4,6 +4,7 @@
 @tailwind utilities;
 @import "./markdown.css";
 @import "./button.css";
+@import "./swup.css";
 
 
 * {

@@ -1,14 +1,20 @@
-import { useRef } from "react";
+import { useRef, componentDid } from "react";
+
+import Head from "next/head";
+import Link from "next/link";
+
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
+import Footer from "../components/Footer";
+import Button from "../components/Button";
+
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -41,13 +47,18 @@ export default function Home() {
   };
 
   useIsomorphicLayoutEffect(() => {
+    AOS.init();
+    AOS.refresh();
+
     stagger(
       [textOne.current, textTwo.current, textThree.current, textFour.current],
       { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
       { y: 0, x: 0, transform: "scale(1)" }
     );
   }, []);
-
+  
+  
+  
   return (
     <div className="relative">
       
@@ -109,7 +120,7 @@ export default function Home() {
         </div>
 
         {/* Projects */}
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
+        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" data-aos="flip-left" ref={workRef}>
           <h1 className="text-2xl text-bold">Work.</h1>
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
